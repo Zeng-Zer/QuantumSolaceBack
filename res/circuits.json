@@ -1,0 +1,138 @@
+[
+    {
+        "level": 2,
+        "registers": [
+            [
+                {
+                    "name": "H",
+                    "option": null
+                }
+            ]
+        ]
+    },
+    {
+        "level": 3,
+        "registers": [
+            [
+                {
+                    "name": "H",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "control"
+                }
+            ],
+            [
+                {
+                    "name": "CX",
+                    "option": "target"
+                }
+            ]
+        ]
+    },
+    {
+        "level": 4,
+        "registers": [
+            [
+                {
+                    "name": "H",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "control"
+                }
+            ],
+            [
+                {
+                    "name": "CX",
+                    "option": "target"
+                },
+                {
+                    "name": "CX",
+                    "option": "control"
+                }
+            ],
+            [
+                {
+                    "name": "CX",
+                    "option": "target"
+                }
+            ]
+        ]
+    },
+    {
+        "level": 5,
+        "registers": [
+            [
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "H",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "control"
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "Z",
+                    "option": null
+                },
+                {
+                    "name": "X",
+                    "option": null
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "control"
+                },
+                {
+                    "name": "H",
+                    "option": null
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                }
+            ],
+            [
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "target"
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                },
+                {
+                    "name": "CX",
+                    "option": "target"
+                },
+                {
+                    "name": "barrier",
+                    "option": null
+                }
+            ]
+        ]
+    }
+]

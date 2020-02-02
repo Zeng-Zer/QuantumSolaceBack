@@ -21,10 +21,13 @@ def getQTP():
 def checkCircuit():
     circuit = Circuit.from_json(request.get_json())
     solutionsCircuits = solutionCircuitsByLevel[circuit.level]
+    app.logger.debug(json.dumps(request.get_json()))
+    app.logger.debug(solutionsCircuits[0].__dict__)
     if circuit in solutionsCircuits:
-        return 'SUCCESS'
+        app.logger.debug("FOUND")
     else:
-        return 'FAILURE'
+        app.logger.debug("NOT FOUND")
+    return json.dumps(circuit, default = lambda o: o.__dict__, indent = 4)
 
 @app.route('/runOnQiskit', methods = ['POST'])
 def runOnQiskit():
