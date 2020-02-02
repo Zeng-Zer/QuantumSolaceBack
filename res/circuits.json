@@ -24,6 +24,7 @@
                 }
             ],
             [
+                null,
                 {
                     "name": "CX",
                     "option": "target"
@@ -112,6 +113,7 @@
                     "name": "barrier",
                     "option": null
                 },
+                null,
                 {
                     "name": "CX",
                     "option": "target"
@@ -120,6 +122,8 @@
                     "name": "barrier",
                     "option": null
                 },
+                null,
+                null,
                 {
                     "name": "barrier",
                     "option": null
@@ -128,6 +132,7 @@
                     "name": "CX",
                     "option": "target"
                 },
+                null,
                 {
                     "name": "barrier",
                     "option": null

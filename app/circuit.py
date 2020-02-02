@@ -6,17 +6,22 @@ import json
 class Gate:
     @classmethod
     def from_json(cls, data):
-        return cls(**data)
+        if data == None:
+            return None
+        else:
+            return cls(**data)
 
     def __init__(self, name: str, option: str):
         self.name = name
         self.option = option
 
     def __eq__(self, other):
-        return self.name == other.name and self.option == other.option
+        return (self is None and other is None) or \
+            (self != None and other != None and self.name == other.name and self.option == other.option)
 
     def __ne__(self, other):
-        return self.gates != other.gates or self.option != other.option
+        return (self is None and other is not None) or (self is not None and other is None) or \
+            self.gates != other.gates or self.option != other.option
 
 
 class Register:

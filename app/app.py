@@ -1,10 +1,11 @@
 from flask import Flask, request
-import circuit as c
+import circuit as C
+import quantum as qu
 import json
 import pprint
 
-Circuit = c.Circuit
-solutionCircuitsByLevel = c.allCircuitsByLevel
+Circuit = C.Circuit
+solutionCircuitsByLevel = C.allCircuitsByLevel
 
 app = Flask(__name__)
 
@@ -26,4 +27,7 @@ def checkCircuit():
 @app.route('/runOnQiskit', methods = ['POST'])
 def runOnQiskit():
     circuit = Circuit.from_json(request.get_json())
-    return 'QISKIT'
+    count = qu.runSimulation(circuit)
+    app.logger.info(count)
+    encodedPlot = qu.getBase64Plot(count)
+    return encodedPlot

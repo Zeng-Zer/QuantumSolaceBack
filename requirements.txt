@@ -1,1 +1,3 @@
 Flask
+qiskit==0.13.0
+matplotlib
