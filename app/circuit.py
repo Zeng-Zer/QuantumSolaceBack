@@ -65,5 +65,5 @@ def getAllCircuitsByLevel():
             circuitsByLevel[level] = list(cs)
     return circuitsByLevel
 
-allCircuits = getAllCircuitsByLevel()
+allCircuitsByLevel = getAllCircuitsByLevel()
 
