@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, Aer, execute
-from qiskit.visualization import plot_histogram
+from qiskit.visualization import plot_histogram, plot_bloch_vector
 import circuit as C
 import base64
 import io
@@ -55,10 +55,13 @@ def runSimulation(circuit: Circuit):
     count = result.get_counts(qc)
     return count
 
-def getBase64Plot(count):
+def getBase64Plot(count, level):
     ioBytes = io.BytesIO()
-    fig = plot_histogram(count)
+    if level == 1:
+        fig = plot_bloch_vector(count)
+    else:
+        fig = plot_histogram(count)
     fig.savefig(ioBytes, format = 'png')
     ioBytes.seek(0)
     encodedPlot = base64.b64encode(ioBytes.read())
-    return encodedPlot
+    return encodedPlot.decode('utf-8')

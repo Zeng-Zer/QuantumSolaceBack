@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import circuit as C
 import quantum as qu
 import json
@@ -33,5 +33,9 @@ def runOnQiskit():
     circuit = Circuit.from_json(request.get_json())
     count = qu.runSimulation(circuit)
     app.logger.info(count)
-    encodedPlot = qu.getBase64Plot(count)
-    return encodedPlot
+    encodedPlot = qu.getBase64Plot(count, circuit.level)
+    response = {
+        'count': count,
+        'img': encodedPlot
+    }
+    return json.dumps(response)
