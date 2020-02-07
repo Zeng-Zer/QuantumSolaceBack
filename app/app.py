@@ -12,11 +12,13 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/getCircuits')
+@cross_origin()
 def getCircuits():
     circuits = list(solutionCircuitsByLevel.values())
     return json.dumps(circuits, default = lambda o: o.__dict__, indent = 4)
 
 @app.route('/checkCircuit', methods = ['POST'])
+@cross_origin()
 def checkCircuit():
     circuit = Circuit.from_json(request.get_json())
     solutionsCircuits = solutionCircuitsByLevel[circuit.level]
@@ -26,6 +28,7 @@ def checkCircuit():
         return 'FAILURE'
 
 @app.route('/runOnQiskit', methods = ['POST'])
+@cross_origin()
 def runOnQiskit():
     circuit = Circuit.from_json(request.get_json())
     count = qu.runSimulation(circuit)
