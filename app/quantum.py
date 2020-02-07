@@ -58,7 +58,7 @@ def runSimulation(circuit: Circuit):
 def getBase64Plot(count, level):
     ioBytes = io.BytesIO()
     if level == 1:
-        fig = plot_bloch_vector(count)
+        fig = plot_bloch_vector([0, 0, 0])
     else:
         fig = plot_histogram(count)
     fig.savefig(ioBytes, format = 'png')
