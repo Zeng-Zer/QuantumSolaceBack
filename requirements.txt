@@ -1,3 +1,4 @@
 Flask
+Flask-Cors
 qiskit==0.13.0
 matplotlib
