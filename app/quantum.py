@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, Aer, execute
-from qiskit.visualization import plot_histogram, plot_bloch_vector
+from qiskit.visualization import plot_histogram, plot_bloch_multivector
 import circuit as C
 import base64
 import io
@@ -46,6 +46,9 @@ def runSimulation(circuit: Circuit):
         elif action != None:
             action(source, target)
 
+    job = execute(qc, Aer.get_backend("statevector_simulator"))
+    statevector = job.result().get_statevector()
+
     for i in range(nbRegisters):
         qc.measure(i, i)
 
@@ -53,12 +56,12 @@ def runSimulation(circuit: Circuit):
     job = execute(qc, backend, shots=1024)
     result = job.result()
     count = result.get_counts(qc)
-    return count
+    return count, statevector
 
-def getBase64Plot(count, level):
+def getBase64Plot(count, statevector, level):
     ioBytes = io.BytesIO()
     if level == 1:
-        fig = plot_bloch_vector(count)
+        fig = plot_bloch_multivector(statevector)
     else:
         fig = plot_histogram(count)
     fig.savefig(ioBytes, format = 'png')
