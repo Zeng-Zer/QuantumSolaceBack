@@ -31,9 +31,9 @@ def checkCircuit():
 @cross_origin()
 def runOnQiskit():
     circuit = Circuit.from_json(request.get_json())
-    count = qu.runSimulation(circuit)
+    count, statevector = qu.runSimulation(circuit)
     app.logger.info(count)
-    encodedPlot = qu.getBase64Plot(count, circuit.level)
+    encodedPlot = qu.getBase64Plot(count, statevector, circuit.level)
     response = {
         'count': count,
         'img': encodedPlot
