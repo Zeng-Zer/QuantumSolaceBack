@@ -22,10 +22,15 @@ def getCircuits():
 def checkCircuit():
     circuit = Circuit.from_json(request.get_json())
     solutionsCircuits = solutionCircuitsByLevel[circuit.level]
+    response = {
+        'code': 'SUCCESS',
+        'explanation': solutionCircuitsByLevel[circuit.level][0].explanation
+    }
     if circuit in solutionsCircuits:
-        return 'SUCCESS'
+        return json.dumps(response)
     else:
-        return 'FAILURE'
+        response['code'] = 'FAILURE'
+        return json.dumps(response)
 
 @app.route('/runOnQiskit', methods = ['POST'])
 @cross_origin()
