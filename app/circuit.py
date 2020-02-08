@@ -45,17 +45,19 @@ class Circuit:
     def from_json(cls, data):
         level = data["level"]
         registers = list(map(Register.from_json, data["registers"]))
-        return cls(level, registers)
+        explanation = data["explanation"]
+        return cls(level, registers, explanation)
 
-    def __init__(self, level: int, registers: List[Register]):
+    def __init__(self, level: int, registers: List[Register], explanation: str):
         self.level = level
         self.registers = registers
+        self.explanation = explanation
 
     def __eq__(self, other):
-        return self.level == other.level and self.registers == other.registers
+        return self.level == other.level and self.registers == other.registers and self.explanation == other.explanation
 
     def __ne__(self, other):
-        return self.level != other.level or self.registers != other.registers
+        return self.level != other.level or self.registers != other.registers and self.explanation == other.explanation
 
 
 def getAllCircuitsByLevel():

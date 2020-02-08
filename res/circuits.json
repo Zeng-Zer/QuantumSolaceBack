@@ -1,6 +1,7 @@
 [
   {
     "level": 2,
+    "explanation": "",
     "registers": [
       [
         {
@@ -12,6 +13,7 @@
   },
   {
     "level": 3,
+    "explanation": "",
     "registers": [
       [
         {
@@ -37,6 +39,7 @@
   },
   {
     "level": 4,
+    "explanation": "",
     "registers": [
       [
         {
@@ -84,6 +87,7 @@
   },
   {
     "level": 5,
+    "explanation": "",
     "registers": [
       [
         {
