@@ -46,9 +46,17 @@
         {
           "name": "CX",
           "option": "control"
+        },
+        {
+          "name": null,
+          "option": null
         }
       ],
       [
+        {
+          "name": null,
+          "option": null
+        },
         {
           "name": "CX",
           "option": "target"
@@ -59,6 +67,14 @@
         }
       ],
       [
+        {
+          "name": null,
+          "option": null
+        },
+        {
+          "name": null,
+          "option": null
+        },
         {
           "name": "CX",
           "option": "target"
