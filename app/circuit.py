@@ -57,7 +57,7 @@ class Circuit:
         return self.level == other.level and self.registers == other.registers and self.explanation == other.explanation
 
     def __ne__(self, other):
-        return self.level != other.level or self.registers != other.registers and self.explanation == other.explanation
+        return self.level != other.level or self.registers != other.registers or self.explanation != other.explanation
 
 
 def getAllCircuitsByLevel():
@@ -73,4 +73,3 @@ def getAllCircuitsByLevel():
     return circuitsByLevel
 
 allCircuitsByLevel = getAllCircuitsByLevel()
-
