@@ -45,7 +45,10 @@ class Circuit:
     def from_json(cls, data):
         level = data["level"]
         registers = list(map(Register.from_json, data["registers"]))
-        explanation = data["explanation"]
+        if "explanation" in data:
+            explanation = data["explanation"]
+        else:
+            explanation = ""
         return cls(level, registers, explanation)
 
     def __init__(self, level: int, registers: List[Register], explanation: str):
