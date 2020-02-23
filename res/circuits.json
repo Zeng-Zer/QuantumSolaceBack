@@ -91,6 +91,7 @@
   {
     "level": 5,
     "explanation": "<h2>Superdense coding</h2><br/>Quantum teleportation and superdense coding are closely related and might cause confusion if not properly explained or differentiate. Quantum teleportation is a process by which the state of qubit ( |𝜓⟩ ) can be transmitted from one location to another, with the help of classical communication and a Bell pair. In other words, we can say it is a protocol that destroys the quantum state of a qubit in one location and recreates it on a qubit at a distant location, with the help of shared entanglement. Superdense coding is a procedure that allows someone to send two classical bits to another party using just a single qubit of communication. The teleportation protocol is actually a flipped version of the superdense coding protocol, in the sense that Alice and Bob merely \"swap their equipment.\"",
+    "formula": "$$\\frac{1}{\\sqrt2}(|00\\rangle + |11\\rangle)$$",
     "registers": [
       [
         {
