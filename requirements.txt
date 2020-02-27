@@ -2,3 +2,4 @@ Flask
 Flask-Cors
 qiskit==0.13.0
 matplotlib
+gunicorn==19.7.1
