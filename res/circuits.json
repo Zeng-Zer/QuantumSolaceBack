@@ -1,7 +1,11 @@
 [
   {
+    "title": "Superposition state",
     "level": 2,
-    "explanation": "<h2>Superposition state</h2><br/><p>Computers are deterministic, predictable machines and are designed to blindly follow sets of instructions in a repeatable manner. This nature of computers has of course served us extremely well through most of the last century, but this design comes with a fundamental flaw: it cannot perform random operations. Random number generators are an extremely important component of many applications today, but whilst the numbers they generate might be random enough, they are “pseudo” random and are often possible to predict or reverse engineer in some way.<br/><br/>Today it is possible to harness the strange, unpredictable nature of subatomic particles and use them to perform calculations inside a quantum computer.<br/><br/>To manipulate qubits in a quantum computer we use quantum gates much like the gates of a classical circuit. Whilst a classical computer can perform operations on bits such as flipping them to their opposite value, quantum gates can do these operations and more advanced quantum operations such as pushing a qubit into a superposition of both possible values. A gate that pushes a qubit into a superposition is called a Hadamard gate and is one of the most fundamental and commonly used logic gates in quantum computing [10].</p>",
+    "explanation": [
+      "Computers are deterministic, predictable machines and are designed to blindly follow sets of instructions in a repeatable manner. This nature of computers has of course served us extremely well through most of the last century, but this design comes with a fundamental flaw: it cannot perform random operations. Random number generators are an extremely important component of many applications today, but whilst the numbers they generate might be random enough, they are \"pseudo\" random and are often possible to predict or reverse engineer in some way.",
+      "Today it is possible to harness the strange, unpredictable nature of subatomic particles and use them to perform calculations inside a quantum computer. To manipulate qubits in a quantum computer we use quantum gates much like the gates of a classical circuit. Whilst a classical computer can perform operations on bits such as flipping them to their opposite value, quantum gates can do these operations and more advanced quantum operations such as pushing a qubit into a superposition of both possible values. A gate that pushes a qubit into a superposition is called a Hadamard gate and is one of the most fundamental and commonly used logic gates in quantum computing.When we push the spin of an electron into a superposition of both possible spin up and down states representing the values 1 and 0 of a qubit, the electron can be said to have a simultaneous spin of both values, and the qubit is in a superposition of 0 and 1. When measuring this qubit, we collapse the superposition and force it into one of these two possible states, each with an equal probability of occurring. With each superposition and measurement we have a 50% chance of measuring either 1 or 0. We would then have performed the equivalent of a coin flip using the fundamental laws of the subatomic world."
+    ],
     "formula": "$${\\displaystyle {\\frac {|0\\rangle +|1\\rangle }{\\sqrt {2}}}}$$",
     "registers": [
       [
@@ -13,8 +17,12 @@
     ]
   },
   {
+    "title": "Entangled state",
     "level": 3,
-    "explanation": "<h2>Entangled state</h2><br/><p>Quantum entanglement is a label for the observed physical phenomenon that occurs when a pair or group of particles is generated, interact, or share spatial proximity in a way such that the quantum state of each particle of the pair or group cannot be described independently of the state of the others, even when the particles are separated by a large distance. Therefore, two entangled objects O1 and O2 are not independent even if they are separed by a great distance, we have to consider (O1 + O2) as a unique system.</p>",
+    "explanation": [
+      "Quantum entanglement is a label for the observed physical phenomenon that occurs when a pair or group of particles is generated, interact, or share spatial proximity in a way such that the quantum state of each particle of the pair or group cannot be described independently of the state of the others, even when the particles are separated by a large distance. Therefore, two entangled objects O1 and O2 are not independent even if they are separated by a great distance, we have to consider (O1 + O2) as a unique system.",
+      "According to some interpretations of quantum mechanics, the effect of one measurement occurs instantly. Other interpretations which don't recognize wavefunction collapse dispute that there is any \"effect\" at all. However, all interpretations agree that entanglement produces correlation between the measurements and that the mutual information between the entangled particles can be exploited, but that any transmission of information at faster-than-light speeds is impossible. Quantum entanglement has been demonstrated experimentally with photons, neutrinos, electrons, molecules as large as buckyballs, and even small diamonds. The utilization of entanglement in communication, computation and quantum radar is a very active area of research and development."
+    ],
     "formula": "$${\\displaystyle {\\frac {|00\\rangle +|11\\rangle }{\\sqrt {2}}}}$$",
     "registers": [
       [
@@ -40,8 +48,12 @@
     ]
   },
   {
+    "title": "Greenberger–Horne–Zeilinger (GHZ) state",
     "level": 4,
-    "explanation": "<h2>Greenberger–Horne–Zeilinger state</h2><br/>Greenberger–Horne–Zeilinger state (GHZ state) is a certain type of entangled quantum state that involves at least three subsystems (particle states, or qubits).In simple words, it is a quantum superposition of all subsystems being in state 0 with all of them being in state 1 (states 0 and 1 of a single subsystem are fully distinguishable). The GHZ state is a maximally entangled quantum state.",
+    "explanation": [
+      "The GHZ states (Greenberger—Horne—Zeilinger states) are a set of entangled states that can be used to prove the GHZ theorem, which is a significant improvement over Bell's Theorem as a way to disprove the concept of “elements of reality”, a concept introduced by EPR problem (Einstein—Podolsky—Rosen) in their attempt to prove that quantum theory is incomplete. Conceding that they did not quite know what “reality” is, EPR nonetheless said that it had to contain an “element of reality” as one of its properties. This was that if one could discover a property of a system (i.e., predict it with 100% certainty) by making an experiment elsewhere, that in no way interacted with the system, then this property was an element of reality. The argument was that since one had not in any way interacted with the system, then one could not have affected this property, and so the property must have existed before one performed one's experiment. Thus the property is an intrinsic part of the system, and not an artifact of the measurement one made.",
+      "Greenberger–Horne–Zeilinger state (GHZ state) is a certain type of entangled quantum state that involves at least three subsystems (particle states, or qubits). In simple words, it is a quantum superposition of all subsystems being in state 0 with all of them being in state 1 (states 0 and 1 of a single subsystem are fully distinguishable). The GHZ state is a maximally entangled quantum state."
+    ],
     "formula": "$${\\displaystyle {\\frac {|000\\rangle +|111\\rangle }{\\sqrt {2}}}}$$",
     "registers": [
       [
@@ -89,15 +101,15 @@
     ]
   },
   {
+    "title": "Superdense coding state",
     "level": 5,
-    "explanation": "<h2>Superdense coding</h2><br/>Quantum teleportation and superdense coding are closely related and might cause confusion if not properly explained or differentiate. Quantum teleportation is a process by which the state of qubit ( |𝜓⟩ ) can be transmitted from one location to another, with the help of classical communication and a Bell pair. In other words, we can say it is a protocol that destroys the quantum state of a qubit in one location and recreates it on a qubit at a distant location, with the help of shared entanglement. Superdense coding is a procedure that allows someone to send two classical bits to another party using just a single qubit of communication. The teleportation protocol is actually a flipped version of the superdense coding protocol, in the sense that Alice and Bob merely \"swap their equipment.\"",
+    "explanation": [
+      "Superdense coding (or dense coding) is a quantum communication protocol to transmit two classical bits of information from a sender (often called Alice) to a receiver (often called Bob), by sending only one qubit from Alice to Bob, under the assumption of Alice and Bob pre-sharing an entangled state. This protocol was first proposed by Bennett and Wiesner in 1992 and experimentally actualized in 1996 by Mattle, Weinfurter, Kwiat and Zeilinger using entangled photon pairs. By performing one of four quantum gate operations on the (entangled) qubit she possesses, Alice can prearrange the measurement Bob makes. After receiving Alice's qubit, operating on the pair and measuring both, Bob has two classical bits of information. If Alice and Bob do not already share entanglement before the protocol begins, then it is impossible to send two classical bits using 1 qubit, as this would violate Holevo's theorem. Superdense coding is the underlying principle of secure quantum secret coding. The necessity of having both qubits to decode the information being sent eliminates the risk of eavesdroppers intercepting messages. It can be thought of as the opposite of quantum teleportation, in which one transfers one qubit from Alice to Bob by communicating two classical bits, as long as Alice and Bob have a pre-shared Bell pair.",
+      "Superdense coding is a form of secure quantum communication. If an eavesdropper, which may be referred to as Eve, intercepts Alice's qubit en route to Bob, all that is obtained by Eve is part of an entangled state. Without access to Bob's qubit, Eve is unable to get any information from Alice's qubit. A third party is unable to eavesdrop on information being communicated through superdense coding and an attempt to measure either qubit would collapse the state of that qubit and alert Bob and Alice."
+    ],
     "formula": "$$\\frac{1}{\\sqrt2}(|00\\rangle + |11\\rangle)$$",
     "registers": [
       [
-        {
-          "name": "barrier",
-          "option": null
-        },
         {
           "name": "H",
           "option": null
@@ -105,10 +117,6 @@
         {
           "name": "CX",
           "option": "control"
-        },
-        {
-          "name": "barrier",
-          "option": null
         },
         {
           "name": "Z",
@@ -119,25 +127,25 @@
           "option": null
         },
         {
-          "name": "barrier",
-          "option": null
-        },
-        {
           "name": "CX",
           "option": "control"
         },
         {
           "name": "H",
           "option": null
-        },
-        {
-          "name": "barrier",
-          "option": null
         }
       ],
       [
         {
-          "name": "barrier",
+          "name": null,
+          "option": null
+        },
+        {
+          "name": "CX",
+          "option": "target"
+        },
+        {
+          "name": null,
           "option": null
         },
         {
@@ -149,31 +157,7 @@
           "option": "target"
         },
         {
-          "name": "barrier",
-          "option": null
-        },
-        {
           "name": null,
-          "option": null
-        },
-        {
-          "name": null,
-          "option": null
-        },
-        {
-          "name": "barrier",
-          "option": null
-        },
-        {
-          "name": "CX",
-          "option": "target"
-        },
-        {
-          "name": null,
-          "option": null
-        },
-        {
-          "name": "barrier",
           "option": null
         }
       ]

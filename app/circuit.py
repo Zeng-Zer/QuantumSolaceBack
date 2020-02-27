@@ -48,18 +48,23 @@ class Circuit:
         if "explanation" in data:
             explanation = data["explanation"]
         else:
-            explanation = ''
+            explanation = []
         if "formula" in data:
             formula = data["formula"]
         else:
             formula = ''
-        return cls(level, registers, explanation, formula)
+        if "title" in data:
+            title = data["title"]
+        else:
+            title = ''
+        return cls(level, registers, explanation, formula, title)
 
-    def __init__(self, level: int, registers: List[Register], explanation: str, formula: str):
+    def __init__(self, level: int, registers: List[Register], explanation: List[str], formula: str, title: str):
         self.level = level
         self.registers = registers
         self.explanation = explanation
         self.formula = formula
+        self.title = title
 
     def __eq__(self, other):
         return self.level == other.level and self.registers == other.registers
